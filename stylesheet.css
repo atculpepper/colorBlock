@@ -1,0 +1,25 @@
+.square {
+  width: 100px;
+  height: 100px;
+  margin-left: 5px;
+  margin-right: 5px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  display: inline-block;
+}
+
+.red {
+  background: #fc2403;
+}
+
+.green {
+  background: #41a326;
+}
+
+.blue {
+  background: #2677a3;
+}
+
+.yellow {
+  background: #f8ff26;
+}
