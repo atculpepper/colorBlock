@@ -10,13 +10,6 @@ let numYellowClicks = 0;
 
 function init() {
   console.log("jq loaded");
-  $(".container").append(`
-  <div class="square red"></div>
-  <div class="square blue"></div>
-  <div class="square green"></div>
-  <div class="square yellow"></div>
-  `);
-
   $(".js-button-redButton").on("click", clickRed);
   $(".js-button-redButton").on("click", addRed);
 
@@ -29,11 +22,18 @@ function init() {
   $(".js-button-yellowButton").on("click", clickYellow);
   $(".js-button-yellowButton").on("click", addYellow);
 
-  $(".square").on("click", squareClick);
+  $(".container").append(`
+  <div class="square red"></div>
+  <div class="square blue"></div>
+  <div class="square green"></div>
+  <div class="square yellow"></div>
+  `);
+
+  $(".container").on("click", ".square", SquareClick);
 }
 
-function squareClick() {
-  console.log("in squareClick");
+function SquareClick() {
+  console.log("in SquareClick");
 }
 // squareClick currently only linked up on 4 first appended squares
 //looks like CSS stylesheet is not connected to any new squares (margins different)
